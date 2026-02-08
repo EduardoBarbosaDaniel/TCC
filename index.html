@@ -4,29 +4,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nome empresa</title>
+    <title>Auron</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
     <header>
-        <nav>
-            <a class="logo" href="/">Tiger code</a>
-            <div class="mobile-menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-            <ul class="nav-list">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/">Sobre-nós</a></li>
-                <li><a href="/">Projetos</a></li>
-                <li><a href="/">Contato</a></li>
+        <nav id="navbar">
+            <a id="nav_logo"> <img src=""> Auron_ </a>
+
+            <ul id="nav_list">
+                <li class="nav-item active">
+                    <a href=""> Inicio </a>
+                </li>
+                <li class="nav-item">
+                    <a href=""> Sobre nós</a>
+                </li>
+                <li class="nav-item">
+                    <a href=""> Objetivo </a>
+                </li>
+                <li class="nav-item">
+                    <a href=""> Contato </a>
+                </li>
             </ul>
+            <button class="btn-default"> Ola </button>
+
+            <button id="mobile_btn">
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </button>
         </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href=""> Inicio </a>
+                </li>
+                <li class="nav-item">
+                    <a href=""> Sobre nós</a>
+                </li>
+                <li class="nav-item">
+                    <a href=""> Objetivo </a>
+                </li>
+                <li class="nav-item">
+                    <a href=""> Contato </a>
+                </li>
+            </ul>
+            <button class="btn-default">
+                ola
+            </button>
+        </div>
     </header>
-    <main></main>
-    <script src="mobile-navbar.js"></script>
+
+    <main id="content">
+        <section id="home">
+            <div class="shape"></div>
+            <div id="cta">
+                <h1 class="title">Fazemos da sua empresa um fenomeno extraordinario <span>raro</span>
+                </h1>
+
+                <p class="description">
+                    Bom dia é o caralho
+                </p>
+
+                <div id="cta_buttons">
+                    <a href="#" class="btn-default">
+                        Sobre nos
+                    </a>
+
+                    <a href="tel: +1923420" id="phone_button">
+                        <button class="btn-default">
+                            <i class="fa-solid fa-phone"></i>
+                        </button>
+                        (51) 92042-3243
+                    </a>
+                </div>
+
+                <div class="social_media_buttons">
+
+                    <a href="">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                    <a href="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2 class="section-title">Sobre nós</h2>
+
+            <div class="about-content">
+
+                <div class="about-info">
+                    <h3>Nossa <span>História</span></h3>
+                    <p>
+                        A Auron_ nasceu com o propósito de transformar ideias em
+                        soluções digitais eficientes, modernas e funcionais.
+                        Atuamos no desenvolvimento de sistemas web sob medida,
+                        sempre focando desempenho, usabilidade e inovação.
+                    </p>
+                </div>
+
+                <div class="about-info">
+                    <h3>Nosso <span>Propósito</span></h3>
+                    <p>
+                        Desenvolver sistemas web que ajudem empresas a crescer,
+                        automatizar processos e se destacar no ambiente digital,
+                        entregando tecnologia acessível, segura e escalável.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+        <section id="contact">
+            <h1 class="title">Entre em <span>contato</span></h1>
+            <p class="subtitle">
+                Vamos conversar sobre como podemos transformar sua ideia em um sistema web eficiente.
+            </p>
+
+            <div class="contact-container">
+
+                <!-- Informações -->
+                <div class="contact-info">
+                    <h3>Fale com a Auron_</h3>
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        contato@auron.dev
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        (51) 92042-3243
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Santa Bárbara d’Oeste - SP
+                    </p>
+
+                    <div class="social_media_buttons">
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Formulário -->
+                <form class="contact-form">
+                    <input type="text" placeholder="Seu nome" required>
+                    <input type="email" placeholder="Seu e-mail" required>
+                    <input type="text" placeholder="Assunto">
+                    <textarea placeholder="Digite sua mensagem..." rows="5"></textarea>
+
+                    <button type="submit" class="btn-default">
+                        Enviar mensagem
+                    </button>
+                </form>
+
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="footer-content">
+
+                <div class="footer-brand">
+                    <h2>Auron_</h2>
+                    <p>
+                        Desenvolvimento de sistemas web sob medida,
+                        transformando ideias em soluções digitais.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#">Sobre nós</a></li>
+                        <li><a href="#">Objetivo</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h3>Redes sociais</h3>
+
+                    <div class="social_media_buttons">
+                        <a href="">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Auron_ — Todos os direitos reservados</p>
+            </div>
+        </footer>
+
+    </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
