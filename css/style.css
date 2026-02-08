@@ -1,26 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: rebeccapurple;
+    overflow-x: hidden;
 }
 
-section{
+section {
     padding: 28px 8%;
 }
 
-.btn-default{
+.btn-default {
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #db6218;
+    background-color: #8610d0;
     border-radius: 12px;
     padding: 10px 14px;
     font-weight: 600;
@@ -29,15 +30,17 @@ section{
     transition: background-color .3s ease;
 }
 
-.btn-default:hover{
-    background-color: bisque;
+.btn-default:hover {
+    background-color: rgb(117, 17, 170);
 }
 
-.social_media_buttons{
+.social_media_buttons {
     display: flex;
     gap: 18px
+    
 }
-.social_media_buttons a{
+
+.social_media_buttons a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,117 +50,19 @@ section{
     font-size: 1.25rem;
     border-radius: 10px;
     text-decoration: none;
-    color: #1d1d1d;    
+    color: #1d1d1d;
     box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
     transition: box-shadow .3s ease;
 }
 
-.social_media_buttons{
-     box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+.social_media_buttons {
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
-/* Sobre nos e proposito */
-#about {
-    padding: 32px 4%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: aliceblue;
-    min-height: calc(100vh - 96px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    border-radius: 32px;
-}
 
-#about .section-title {
-    color: #1d1d1d;
-    margin-bottom: 32px;
-}
-
-.about-content {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    max-width: 1000px;
-}
-
-.about-info {
-    padding: 24px;
-    border-radius: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-    h3{
-        color: #1d1d1d;
-        font-size: 1.8rem;
-        margin-bottom: 4px;
-
-        span{
-            color: #ccc;
-        }
-    }
-}
-
-p{
-    color: #444;
-    font-size: 1rem;
-
-    span: var(--color-secondary-1);
-    font-weight: 500;
-}
-
-.about-info h3 {
-    font-size: 1.6rem;
-    margin-bottom: 8px;
-}
-
-@media (min-width: 768px){
-    #container{
-        background-image: url(../Assets/img/index/fundo_estrelado.jpg);
-        background-size: cover;
-        background-position: start;
-        background-repeat: no-repeat;
-    } 
-
-    #trending{
-        .trending-cards{
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 24px;
-        }
-    }
-}
-
-@media (min-width: 1200px){
-    #about{
-        margin: 4%;
-        justify-content: center;
-
-        .about-content{
-            flex-direction: row;
-            align-items: center;
-            gap: 48px;
-        }
-
-        .about-image{
-            order: 1;     
-           }
-
-           .about-info:first-child{
-            order: 2;
-           }
-             .about-info:last-child{
-            order: 3;
-           }
-    }
-}
-
-.about-info span {
-    color: #db6218;
-}
 
 /* contato */
-#contact{
+#contact {
     min-height: 100vh;
     padding: 64px 8%;
     display: flex;
@@ -166,23 +71,23 @@ p{
     gap: 16px;
 }
 
-#contact .title{
+#contact .title {
     font-size: 3rem;
     text-align: center;
 }
 
-#contact .title span{
+#contact .title span {
     color: #db6218;
 }
 
-.subtitle{
+.subtitle {
     max-width: 600px;
     text-align: center;
     color: #444;
     margin-bottom: 48px;
 }
 
-.contact-container{
+.contact-container {
     display: flex;
     gap: 48px;
     width: 100%;
@@ -190,20 +95,20 @@ p{
 }
 
 /* Lado esquerdo */
-.contact-info{
+.contact-info {
     flex: 1;
     background-color: #fff;
     padding: 32px;
     border-radius: 20px;
-    box-shadow: 0 6px 12px rgba(0,0,0,.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .1);
 }
 
-.contact-info h3{
+.contact-info h3 {
     margin-bottom: 16px;
     font-size: 1.6rem;
 }
 
-.contact-info p{
+.contact-info p {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -212,7 +117,7 @@ p{
 }
 
 /* Formulário */
-.contact-form{
+.contact-form {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -220,11 +125,11 @@ p{
     background-color: #fff;
     padding: 32px;
     border-radius: 20px;
-    box-shadow: 0 6px 12px rgba(0,0,0,.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .1);
 }
 
 .contact-form input,
-.contact-form textarea{
+.contact-form textarea {
     width: 100%;
     padding: 14px;
     border-radius: 10px;
@@ -233,76 +138,76 @@ p{
 }
 
 .contact-form input:focus,
-.contact-form textarea:focus{
+.contact-form textarea:focus {
     outline: none;
-    border-color: #db6218;
+    border-color: #af1de3;
 }
 
 /* Responsivo */
-@media (max-width: 768px){
-    .contact-container{
+@media (max-width: 768px) {
+    .contact-container {
         flex-direction: column;
     }
 }
 
 /* Rodapé ou footer */
 
-#footer{
+#footer {
     background-color: #1d1d1d;
     color: #fff;
     padding: 48px 8% 24px;
 }
 
-.footer-content{
+.footer-content {
     display: flex;
     justify-content: space-between;
     gap: 48px;
     flex-wrap: wrap;
 }
 
-.footer-brand{
+.footer-brand {
     max-width: 320px;
 }
 
-.footer-brand h2{
+.footer-brand h2 {
     font-size: 1.8rem;
     margin-bottom: 12px;
 }
 
-.footer-brand p{
+.footer-brand p {
     font-size: .95rem;
     line-height: 1.6;
     color: #ccc;
 }
 
 .footer-links h3,
-.footer-social h3{
+.footer-social h3 {
     margin-bottom: 12px;
 }
 
-.footer-links ul{
+.footer-links ul {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.footer-links a{
+.footer-links a {
     text-decoration: none;
     color: #ccc;
     transition: color .3s;
 }
 
-.footer-links a:hover{
+.footer-links a:hover {
     color: #db6218;
 }
 
 /* reaproveitando seus botões sociais */
-.footer-social .social_media_buttons a{
+.footer-social .social_media_buttons a {
     background-color: #fff;
 }
 
-.footer-bottom{
+.footer-bottom {
     margin-top: 32px;
     padding-top: 16px;
     border-top: 1px solid #333;
@@ -312,8 +217,8 @@ p{
 }
 
 /* Responsivo */
-@media (max-width: 768px){
-    .footer-content{
+@media (max-width: 768px) {
+    .footer-content {
         flex-direction: column;
         align-items: center;
         text-align: center;

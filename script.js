@@ -3,4 +3,33 @@ $(document).ready(function () {
         $('#mobile_menu').toggleClass('active');
         $('#mobile_btn .mobile-menu').toggleClass('active');
     });
+
+    const sections = $('section');
+    const navItems = $('.nav-item');
+
+    $(window).on('scroll', function () {
+        const header = $('header');
+        const scrollPosition = $(window).scrollTop(); // corrigido
+
+        let activeSecctionIndex = 0;
+
+        if (scrollPosition <= 0) {
+            header.css('box-shadow', 'none');
+        } else {
+            header.css('box-shadow', '0 4px 10px rgba(0, 0, 0, 0.1)'); // corrigido
+        }
+
+        sections.each(function(i){
+            const section = $(this);
+            const sectionTop = section.offset().top - 96;
+            const sectionBottom = sectionTop+ section.outerHeight();
+
+            if(scrollPosition >= sectionTop && scrollPosition < sectionBottom){
+                activeSecctionIndex = i;
+                return false;
+            }
+        })
+        navItems.removeClass('active')
+        $(navItems[activeSecctionIndex]).addClass('active');
+    });
 });
