@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     $('#mobile_btn').on('click', function () {
         $('#mobile_menu').toggleClass('active');
         $('#mobile_btn .mobile-menu').toggleClass('active');
@@ -8,28 +9,28 @@ $(document).ready(function () {
     const navItems = $('.nav-item');
 
     $(window).on('scroll', function () {
-        const header = $('header');
-        const scrollPosition = $(window).scrollTop(); // corrigido
 
+        const header = $('header');
+        const scrollPosition = $(window).scrollTop();
         let activeSecctionIndex = 0;
 
-        if (scrollPosition <= 0) {
-            header.css('box-shadow', 'none');
+        if (scrollPosition > 0) {
+            header.css('box-shadow', '0 4px 10px rgba(0, 0, 0, 0.1)');
         } else {
-            header.css('box-shadow', '0 4px 10px rgba(0, 0, 0, 0.1)'); // corrigido
+            header.css('box-shadow', 'none');
         }
 
         sections.each(function(i){
-            const section = $(this);
-            const sectionTop = section.offset().top - 96;
-            const sectionBottom = sectionTop+ section.outerHeight();
+            const sectionTop = $(this).offset().top - 120;
 
-            if(scrollPosition >= sectionTop && scrollPosition < sectionBottom){
+            if(scrollPosition >= sectionTop){
                 activeSecctionIndex = i;
-                return false;
             }
-        })
-        navItems.removeClass('active')
+        });
+
+        navItems.removeClass('active');
         $(navItems[activeSecctionIndex]).addClass('active');
+
     });
+
 });
