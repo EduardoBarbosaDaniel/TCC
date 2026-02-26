@@ -215,15 +215,16 @@
                 </div>
 
                 <!-- Formulário -->
-                <form class="contact-form">
-                    <input type="text" placeholder="Seu nome" required>
-                    <input type="email" placeholder="Seu e-mail" required>
-                    <input type="text" placeholder="Assunto">
-                    <textarea placeholder="Digite sua mensagem..." rows="5"></textarea>
+                <form action="https://formsubmit.co/tccw.2026@gmail.com" method="POST" class="contact-form">
+                    <input type="text" name="name" placeholder="Seu nome" required>
+                    <input type="email" name="email" placeholder="Seu e-mail" required>
+                    <input type="text" name="message" placeholder="Assunto">
+                    <textarea placeholder="Digite sua mensagem..." name="mensagem" rows="5"></textarea>
 
                     <button type="submit" class="btn-default">
                         Enviar mensagem
                     </button>
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/obrigado.html">
                 </form>
 
             </div>
@@ -256,7 +257,7 @@
                         <a href="">
                            <i class="fa-brands fa-linktree"></i>
                         </a>
-                        <a href="https://www.instagram.com/auron_web/?utm_source=ig_web_button_share_sheet"">
+                        <a href="https://www.instagram.com/auron_web/?utm_source=ig_web_button_share_sheet">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         <a href="">
