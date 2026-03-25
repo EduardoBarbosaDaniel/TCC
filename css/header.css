@@ -1,10 +1,17 @@
+header.scrolled {
+    background-color: #080808;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
 header {
     width: 100%;
-    padding: 28px 8%;
-    position: sticky;
+    padding: 20px 4%;
+    position: fixed;
     top: 0;
-    background-color: rgb(0, 0, 0);
-    z-index: 3;
+    left: 0;
+    background: transparent;
+    z-index: 10;
+    transition: background 0.3s ease;
 }
 
 #navbar {
@@ -14,9 +21,9 @@ header {
     justify-content: space-between;
 }
 
-#nav_logo {
-    font-size: 24px;
-    color: #fff;
+#nav_logo img {
+    width: 180px; 
+    height: auto; 
 }
 
 #nav_list {
@@ -52,12 +59,18 @@ header {
         display: none;
     }
 
-    #mobile_btn{
-        display: block;
+    /* Burger escondido enquanto header é transparente */
+    #mobile_btn {
+        display: none;
         border: none;
         background-color: transparent;
         font-size: 1.5rem;
         cursor: pointer;
+    }
+
+    /* Burger aparece quando header ganha cor */
+    header.scrolled #mobile_btn {
+        display: block;
     }
 
     #mobile_menu.active {
@@ -76,22 +89,6 @@ header {
     #mobile_nav_list .nav-item {
         list-style: none;
         text-align: center;
-    }
-}
-
-@media screen and (max-width: 1170px) {
-
-    #nav_list,
-    #navbar .btn-default {
-        display: none;
-    }
-
-    #mobile_btn {
-        display: block;
-        border: none;
-        background-color: transparent;
-        font-size: 1.5rem;
-        cursor: pointer;
     }
 }
 

@@ -7,10 +7,10 @@ $(document).ready(function () {
 
     const sections = $('section');
     const navItems = $('.nav-item');
+    const header = $('header');
 
-    $(window).on('scroll', function () {
+    function atualizarNavbar() {
 
-        const header = $('header');
         const scrollPosition = $(window).scrollTop();
         let activeSecctionIndex = 0;
 
@@ -20,10 +20,10 @@ $(document).ready(function () {
             header.css('box-shadow', 'none');
         }
 
-        sections.each(function(i){
+        sections.each(function (i) {
             const sectionTop = $(this).offset().top - 120;
 
-            if(scrollPosition >= sectionTop){
+            if (scrollPosition >= sectionTop) {
                 activeSecctionIndex = i;
             }
         });
@@ -31,6 +31,17 @@ $(document).ready(function () {
         navItems.removeClass('active');
         $(navItems[activeSecctionIndex]).addClass('active');
 
-    });
+        if (scrollPosition > 50) {
+            header.addClass("scrolled");
+        } else {
+            header.removeClass("scrolled");
+        }
+    }
+
+    // executa quando rolar
+    $(window).on('scroll', atualizarNavbar);
+
+    // executa quando a página carregar
+    atualizarNavbar();
 
 });

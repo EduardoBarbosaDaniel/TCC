@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/services.css">
       <link rel="stylesheet" href="css/about.css">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/metropolis.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,7 +23,7 @@
 <body>
     <header id="head">
         <nav id="navbar">
-            <a id="nav_logo"> <img src=""> Auron_ </a>
+            <a id="nav_logo"> <img src="Assets/img/index/Preto.png" alt="logo"></a>
 
             <ul id="nav_list">
                 <li class="nav-item active">
@@ -32,7 +33,7 @@
                     <a href="#services"> Serviços</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#about"> Sobre-nós</a>
+                    <a href="#about"> Sobre nós</a>
                 </li>    
                 <li class="nav-item">
                     <a href="#contact"> Contate-nós</a>
@@ -74,19 +75,19 @@
                 </h1>
 
                 <p class="description-special">
-                    Bom dia o sol já nasceu la na fazendinha a vaca acordou com a madrinha
+                    Olá somos a Auron 
                 </p>
 
                 <div id="cta_buttons">
-                    <a href="#" class="btn-default">
-                        Sobre nos
+                    <a href="#about" class="btn-default">
+                        Sobre nós
                     </a>
 
                     <a href="tel: +1923420" id="phone_button">
                         <button class="btn-default">
                             <i class="fa-solid fa-phone"></i>
                         </button>
-                        (51) 92042-3243
+                        (19) 99267-5305
                     </a>
                 </div>
 
@@ -101,7 +102,7 @@
                     </a>
 
                     <a href="">
-                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-solid fa-envelope"></i>
                     </a>
 
                 </div>
@@ -155,31 +156,38 @@
         </section>
 
         <section id="about">
-            <h2 class="section-title">Sobre nós</h2>
 
-            <div class="about-content">
+    <h2 class="section-title">Sobre Nós</h2>
 
-                <div class="about-info">
-                    <h3>Nossa <span>História</span></h3>
-                    <p>
-                        A Auron_ nasceu com o propósito de transformar ideias em
-                        soluções digitais eficientes, modernas e funcionais.
-                        Atuamos no desenvolvimento de sistemas web sob medida,
-                        sempre focando desempenho, usabilidade e inovação.
-                    </p>
-                </div>
+    <div class="about-container">
 
-                <div class="about-info">
-                    <h3>Nosso <span>Propósito</span></h3>
-                    <p>
-                        Desenvolver sistemas web que ajudem empresas a crescer,
-                        automatizar processos e se destacar no ambiente digital,
-                        entregando tecnologia acessível, segura e escalável.
-                    </p>
-                </div>
+        <div class="about-text">
 
+            <div class="about-card">
+                <h3>Sobre a Auron</h3>
+                <p>
+                A Auron é uma empresa focada no desenvolvimento de sistemas web e sites modernos, criada com o objetivo de ajudar empresas e projetos a se destacarem no ambiente digital. Mesmo sendo recente no mercado, buscamos unir tecnologia,
+                criatividade e eficiência para entregar soluções que realmente atendam às necessidades de cada cliente.
+                </p>
             </div>
-        </section>
+
+            <div class="about-card">
+                <h3>Nosso Propósito</h3>
+                <p>
+                    Nosso trabalho envolve a criação de sites profissionais, sistemas personalizados e aplicações web, sempre priorizando desempenho, organização e uma boa experiência para o usuário. Acreditamos que cada projeto é único, por isso desenvolvemos soluções adaptadas às demandas específicas de cada negócio.
+                    Na Auron, nosso propósito é transformar ideias em soluções digitais funcionais, ajudando empresas a fortalecer sua presença online e a crescer no mundo digital.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="about-image">
+            <img src="Assets/img/index/programacao.jpg" alt="Programação">
+        </div>
+
+    </div>
+
+</section>
         <section id="contact">
             <h1 class="title">Entre em <span>contato</span></h1>
             <p class="subtitle">
@@ -194,12 +202,12 @@
 
                     <p>
                         <i class="fa-solid fa-envelope"></i>
-                        contato@auron.dev
+                        auronwebsistemas@gmail.com
                     </p>
 
                     <p>
                         <i class="fa-solid fa-phone"></i>
-                        (51) 92042-3243
+                        (19) 99267-5305
                     </p>
 
                     <p>
@@ -210,15 +218,15 @@
                     <div class="social_media_buttons">
                         <a href=""><i class="fa-brands fa-linktree"></i></a>
                         <a href="https://www.instagram.com/auron_web/?utm_source=ig_web_button_share_sheet"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-solid fa-envelope"></i></a>
                     </div>
                 </div>
 
                 <!-- Formulário -->
-                <form action="https://formsubmit.co/tccw.2026@gmail.com" method="POST" class="contact-form">
-                    <input type="text" name="name" placeholder="Seu nome" required>
+                <form action="https://formsubmit.co/auronwebsistemas@gmail.com" method="POST" class="contact-form">
+                    <input type="text" name="nome" placeholder="Seu nome" required>
                     <input type="email" name="email" placeholder="Seu e-mail" required>
-                    <input type="text" name="message" placeholder="Assunto">
+                    <input type="text" name="mensagem" placeholder="Assunto">
                     <textarea placeholder="Digite sua mensagem..." name="mensagem" rows="5"></textarea>
 
                     <button type="submit" class="btn-default">
@@ -233,7 +241,7 @@
             <div class="footer-content">
 
                 <div class="footer-brand">
-                    <h2>Auron_</h2>
+                    <h2>Auron</h2>
                     <p>
                         Desenvolvimento de sistemas web sob medida,
                         transformando ideias em soluções digitais.
@@ -261,7 +269,7 @@
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         <a href="">
-                            <i class="fa-brands fa-facebook"></i>
+                           <i class="fa-solid fa-envelope"></i>
                         </a>
                     </div>
                 </div>
@@ -269,7 +277,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>© 2026 Auron_ — Todos os direitos reservados</p>
+                <p>© 2026 Auron — Todos os direitos reservados</p>
             </div>
         </footer>
 
