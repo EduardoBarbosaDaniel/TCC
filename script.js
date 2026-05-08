@@ -45,3 +45,9 @@ $(document).ready(function () {
     atualizarNavbar();
 
 });
+
+// Fecha o menu mobile ao clicar em qualquer link dele
+$('#mobile_nav_list a').on('click', function () {
+    $('#mobile_menu').removeClass('active');
+    $('#mobile_btn .mobile-menu').removeClass('active');
+});

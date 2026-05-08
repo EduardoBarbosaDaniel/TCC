@@ -11,7 +11,7 @@ header {
     left: 0;
     background: transparent;
     z-index: 10;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
 }
 
 #navbar {
@@ -54,9 +54,12 @@ header {
 
 @media screen and (max-width: 1170px) {
 
+    /* Esconde a lista de navegação desktop no mobile */
     #nav_list,
     #navbar .btn-default {
-        display: none;
+        display: none !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
     }
 
     /* Burger escondido enquanto header é transparente */
@@ -68,7 +71,7 @@ header {
         cursor: pointer;
     }
 
-    /* Burger aparece quando header ganha cor */
+    /* Burger aparece quando header ganha cor (após scroll) */
     header.scrolled #mobile_btn {
         display: block;
     }

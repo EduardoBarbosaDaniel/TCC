@@ -7,9 +7,7 @@
     <title>Auron</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/services.css">
-      <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/animations.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/metropolis.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -18,6 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 
 <body>
@@ -27,19 +26,24 @@
 
             <ul id="nav_list">
                 <li class="nav-item active">
-                    <a href="#home"> Inicio </a>
-                </li>
-                  <li class="nav-item">
-                    <a href="#services"> Serviços</a>
+                    <a href="#home" data-i18n="nav_home"> Inicio </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#about"> Sobre nós</a>
-                </li>    
+                    <a href="#services" data-i18n="nav_services"> Serviços</a>
+                </li>
                 <li class="nav-item">
-                    <a href="#contact"> Contate-nós</a>
+                    <a href="#about" data-i18n="nav_about"> Sobre nós</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" data-i18n="nav_contact"> Contate-nós</a>
                 </li>
             </ul>
-    
+
+            <div id="lang-selector">
+                <button data-lang="pt" onclick="setLang('pt')">PT</button>
+                <button data-lang="en" onclick="setLang('en')">EN</button>
+            </div>
+
             <button id="mobile_btn">
                 <div class="mobile-menu">
                     <div class="line1"></div>
@@ -52,16 +56,16 @@
         <div id="mobile_menu">
             <ul id="mobile_nav_list">
                 <li class="nav-item">
-                    <a href="#home"> Inicio </a>
-                </li>
-                 <li class="nav-item">
-                    <a href="#services"> Serviços</a>
+                    <a href="#home" data-i18n="nav_home"> Inicio </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#about"> Sobre nós</a>
+                    <a href="#services" data-i18n="nav_services"> Serviços</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#contact"> Contate-nós</a>
+                    <a href="#about" data-i18n="nav_about"> Sobre nós</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" data-i18n="nav_contact"> Contate-nós</a>
                 </li>
             </ul>
         </div>
@@ -71,19 +75,18 @@
         <section id="home">
             <div class="shape"></div>
             <div id="cta">
-                <h1 class="title">Fazemos da sua empresa um fenomeno extraordinario <span>raro</span>
-                </h1>
+                <h1 class="title" data-i18n="hero_title">Fazemos da sua empresa um fenomeno <span>extraordinario</span></h1>
 
-                <p class="description-special">
-                    Olá somos a Auron 
+                <p class="description-special" data-i18n="hero_sub">
+                    Olá somos a Auron
                 </p>
 
                 <div id="cta_buttons">
-                    <a href="#about" class="btn-default">
+                    <a href="#about" class="btn-default" data-i18n="cta_about">
                         Sobre nós
                     </a>
 
-                    <a href="tel: +1923420" id="phone_button">
+                    <a href="tel:+5519992675305" id="phone_button">
                         <button class="btn-default">
                             <i class="fa-solid fa-phone"></i>
                         </button>
@@ -92,25 +95,22 @@
                 </div>
 
                 <div class="social_media_buttons">
-
-                    <a href="">
+                    <a href="#">
                         <i class="fa-brands fa-linktree"></i>
                     </a>
-
                     <a href="https://www.instagram.com/auron_web/?utm_source=ig_web_button_share_sheet">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
-
-                    <a href="">
+                    <a href="#">
                         <i class="fa-solid fa-envelope"></i>
                     </a>
-
                 </div>
             </div>
         </section>
+
         <section id="services">
-            <h2 class="section-title">Nossos <span>Serviços</span></h2>
-            <p class="section-subtitle">
+            <h2 class="section-title reveal" data-i18n="services_title">Nossos <span>Serviços</span></h2>
+            <p class="section-subtitle reveal" data-i18n="services_subtitle">
                 Soluções digitais sob medida para impulsionar seu negócio.
             </p>
 
@@ -118,8 +118,8 @@
 
                 <div class="service-card">
                     <i class="fa-solid fa-code"></i>
-                    <h3>Desenvolvimento Web</h3>
-                    <p>
+                    <h3 data-i18n="service1_title">Desenvolvimento Web</h3>
+                    <p data-i18n="service1_desc">
                         Sistemas web personalizados, rápidos, seguros e escaláveis,
                         pensados exatamente para a sua necessidade.
                     </p>
@@ -127,8 +127,8 @@
 
                 <div class="service-card">
                     <i class="fa-solid fa-palette"></i>
-                    <h3>UI / UX Design</h3>
-                    <p>
+                    <h3 data-i18n="service2_title">UI / UX Design</h3>
+                    <p data-i18n="service2_desc">
                         Interfaces modernas, intuitivas e responsivas que melhoram
                         a experiência do usuário e aumentam conversões.
                     </p>
@@ -136,8 +136,8 @@
 
                 <div class="service-card">
                     <i class="fa-solid fa-gears"></i>
-                    <h3>Automação de Processos</h3>
-                    <p>
+                    <h3 data-i18n="service3_title">Automação de Processos</h3>
+                    <p data-i18n="service3_desc">
                         Automatizamos tarefas repetitivas para otimizar tempo,
                         reduzir erros e aumentar a produtividade.
                     </p>
@@ -145,8 +145,8 @@
 
                 <div class="service-card">
                     <i class="fa-solid fa-server"></i>
-                    <h3>Manutenção & Suporte</h3>
-                    <p>
+                    <h3 data-i18n="service4_title">Manutenção & Suporte</h3>
+                    <p data-i18n="service4_desc">
                         Atualizações, correções e suporte contínuo para garantir
                         estabilidade e desempenho do seu sistema.
                     </p>
@@ -156,49 +156,45 @@
         </section>
 
         <section id="about">
+            <h2 class="section-title" data-i18n="about_title">Sobre Nós</h2>
 
-    <h2 class="section-title">Sobre Nós</h2>
+            <div class="about-container">
 
-    <div class="about-container">
+                <div class="about-text">
 
-        <div class="about-text">
+                    <div class="about-card">
+                        <h3 data-i18n="about_card1_title">Sobre a Auron</h3>
+                        <p data-i18n="about_card1_desc">
+                            A Auron é uma empresa focada no desenvolvimento de sistemas web e sites modernos...
+                        </p>
+                    </div>
 
-            <div class="about-card">
-                <h3>Sobre a Auron</h3>
-                <p>
-                A Auron é uma empresa focada no desenvolvimento de sistemas web e sites modernos, criada com o objetivo de ajudar empresas e projetos a se destacarem no ambiente digital. Mesmo sendo recente no mercado, buscamos unir tecnologia,
-                criatividade e eficiência para entregar soluções que realmente atendam às necessidades de cada cliente.
-                </p>
+                    <div class="about-card">
+                        <h3 data-i18n="about_card2_title">Nosso Propósito</h3>
+                        <p data-i18n="about_card2_desc">
+                            Nosso trabalho envolve a criação de sites profissionais...
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="about-image">
+                    <img src="Assets/img/index/programacao.jpg" alt="Programação">
+                </div>
+
             </div>
+        </section>
 
-            <div class="about-card">
-                <h3>Nosso Propósito</h3>
-                <p>
-                    Nosso trabalho envolve a criação de sites profissionais, sistemas personalizados e aplicações web, sempre priorizando desempenho, organização e uma boa experiência para o usuário. Acreditamos que cada projeto é único, por isso desenvolvemos soluções adaptadas às demandas específicas de cada negócio.
-                    Na Auron, nosso propósito é transformar ideias em soluções digitais funcionais, ajudando empresas a fortalecer sua presença online e a crescer no mundo digital.
-                </p>
-            </div>
-
-        </div>
-
-        <div class="about-image">
-            <img src="Assets/img/index/programacao.jpg" alt="Programação">
-        </div>
-
-    </div>
-
-</section>
         <section id="contact">
-            <h1 class="title">Entre em <span>contato</span></h1>
-            <p class="subtitle">
+            <h2 class="title" data-i18n="contact_title">Contato</h2>
+            <p class="subtitle" data-i18n="contact_subtitle">
                 Vamos conversar sobre como podemos transformar sua ideia em um sistema web eficiente.
             </p>
 
             <div class="contact-container">
 
-                <!-- Informações -->
                 <div class="contact-info">
-                    <h3>Fale com a Auron_</h3>
+                    <h3 data-i18n="contact_info_title">Fale com a Auron_</h3>
 
                     <p>
                         <i class="fa-solid fa-envelope"></i>
@@ -212,24 +208,23 @@
 
                     <p>
                         <i class="fa-solid fa-location-dot"></i>
-                        Santa Bárbara d’Oeste - SP
+                        Santa Bárbara d'Oeste - SP
                     </p>
 
                     <div class="social_media_buttons">
-                        <a href=""><i class="fa-brands fa-linktree"></i></a>
+                        <a href="#"><i class="fa-brands fa-linktree"></i></a>
                         <a href="https://www.instagram.com/auron_web/?utm_source=ig_web_button_share_sheet"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#"><i class="fa-solid fa-envelope"></i></a>
                     </div>
                 </div>
 
-                <!-- Formulário -->
                 <form action="https://formsubmit.co/auronwebsistemas@gmail.com" method="POST" class="contact-form">
-                    <input type="text" name="nome" placeholder="Seu nome" required>
-                    <input type="email" name="email" placeholder="Seu e-mail" required>
-                    <input type="text" name="mensagem" placeholder="Assunto">
-                    <textarea placeholder="Digite sua mensagem..." name="mensagem" rows="5"></textarea>
+                    <input type="text" name="nome" data-i18n-placeholder="contact_name" placeholder="Seu nome" required>
+                    <input type="email" name="email" data-i18n-placeholder="contact_email" placeholder="Seu e-mail" required>
+                    <input type="text" name="assunto" data-i18n-placeholder="contact_subject" placeholder="Assunto">
+                    <textarea data-i18n-placeholder="contact_message" placeholder="Digite sua mensagem..." name="mensagem" rows="5"></textarea>
 
-                    <button type="submit" class="btn-default">
+                    <button type="submit" class="btn-default" data-i18n="contact_btn">
                         Enviar mensagem
                     </button>
                     <input type="hidden" name="_next" value="http://127.0.0.1:5500/obrigado.html">
@@ -237,39 +232,40 @@
 
             </div>
         </section>
+
         <footer id="footer">
             <div class="footer-content">
 
                 <div class="footer-brand">
                     <h2>Auron</h2>
-                    <p>
+                    <p data-i18n="footer_desc">
                         Desenvolvimento de sistemas web sob medida,
                         transformando ideias em soluções digitais.
                     </p>
                 </div>
 
                 <div class="footer-links">
-                    <h3>Links</h3>
+                    <h3 data-i18n="footer_links_title">Links</h3>
                     <ul>
-                        <li><a href="#home">Início</a></li>
-                        <li><a href="#about">Sobre nós</a></li>
-                        <li><a href="#services">Serviços</a></li>
-                        <li><a href="#contact">Contato</a></li>
+                        <li><a href="#home" data-i18n="footer_link_home">Início</a></li>
+                        <li><a href="#about" data-i18n="footer_link_about">Sobre nós</a></li>
+                        <li><a href="#services" data-i18n="footer_link_services">Serviços</a></li>
+                        <li><a href="#contact" data-i18n="footer_link_contact">Contato</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-social">
-                    <h3>Redes sociais</h3>
+                    <h3 data-i18n="footer_social_title">Redes sociais</h3>
 
                     <div class="social_media_buttons">
-                        <a href="">
-                           <i class="fa-brands fa-linktree"></i>
+                        <a href="#">
+                            <i class="fa-brands fa-linktree"></i>
                         </a>
                         <a href="https://www.instagram.com/auron_web/?utm_source=ig_web_button_share_sheet">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
-                        <a href="">
-                           <i class="fa-solid fa-envelope"></i>
+                        <a href="#">
+                            <i class="fa-solid fa-envelope"></i>
                         </a>
                     </div>
                 </div>
@@ -277,12 +273,15 @@
             </div>
 
             <div class="footer-bottom">
-                <p>© 2026 Auron — Todos os direitos reservados</p>
+                <p data-i18n="footer_copy">© 2026 Auron — Todos os direitos reservados</p>
             </div>
         </footer>
 
     </main>
+
+    <script src="lang.js"></script>
     <script src="script.js"></script>
+    <script src="animations.js"></script>
 </body>
 
 </html>
