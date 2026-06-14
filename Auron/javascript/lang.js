@@ -40,6 +40,30 @@ const translations = {
         contact_message: "Digite sua mensagem...",
         contact_btn: "Enviar mensagem",
 
+        // Contato (abas)
+        tab_diag: "Solicitar diagnóstico",
+        tab_msg: "Enviar mensagem",
+
+        // Diagnóstico
+        diag_title: "Vamos entender seu projeto",
+        diag_subtitle: "Preencha os dados abaixo e nossa equipe vai analisar seu cenário para montar um diagnóstico e orçamento personalizado.",
+        diag_nome: "Seu nome",
+        diag_whatsapp: "WhatsApp (com DDD)",
+        diag_email: "Seu e-mail",
+        diag_tipo_placeholder: "Tipo de projeto",
+        diag_tipo_site: "Site institucional",
+        diag_tipo_ecommerce: "E-commerce",
+        diag_tipo_sistema: "Sistema / Software",
+        diag_tipo_app: "Aplicativo",
+        diag_tipo_outro: "Outro",
+        diag_prazo_placeholder: "Prazo desejado",
+        diag_prazo_urgente: "Urgente",
+        diag_prazo_1mes: "Até 1 mês",
+        diag_prazo_3meses: "1 a 3 meses",
+        diag_prazo_sempressa: "Sem pressa",
+        diag_descricao: "Conte um pouco sobre o que você precisa...",
+        diag_submit: "Enviar e falar no WhatsApp",
+
         // Footer
         footer_desc: "Desenvolvimento de sistemas web sob medida, transformando ideias em soluções digitais.",
         footer_links_title: "Links",
@@ -90,6 +114,30 @@ const translations = {
         contact_subject: "Subject",
         contact_message: "Type your message...",
         contact_btn: "Send message",
+
+        // Contact (tabs)
+        tab_diag: "Request diagnosis",
+        tab_msg: "Send message",
+
+        // Diagnosis
+        diag_title: "Let's understand your project",
+        diag_subtitle: "Fill in the details below and our team will analyze your scenario to put together a personalized diagnosis and quote.",
+        diag_nome: "Your name",
+        diag_whatsapp: "WhatsApp (with area code)",
+        diag_email: "Your e-mail",
+        diag_tipo_placeholder: "Project type",
+        diag_tipo_site: "Institutional website",
+        diag_tipo_ecommerce: "E-commerce",
+        diag_tipo_sistema: "System / Software",
+        diag_tipo_app: "Application",
+        diag_tipo_outro: "Other",
+        diag_prazo_placeholder: "Desired deadline",
+        diag_prazo_urgente: "Urgent",
+        diag_prazo_1mes: "Up to 1 month",
+        diag_prazo_3meses: "1 to 3 months",
+        diag_prazo_sempressa: "No rush",
+        diag_descricao: "Tell us a bit about what you need...",
+        diag_submit: "Send and chat on WhatsApp",
 
         // Footer
         footer_desc: "Custom web systems development, transforming ideas into digital solutions.",

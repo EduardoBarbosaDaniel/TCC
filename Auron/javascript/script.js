@@ -5,7 +5,9 @@ $(document).ready(function () {
         $('#mobile_btn .mobile-menu').toggleClass('active');
     });
 
-    const sections = $('section');
+    const sections = $('section[id]').filter(function() {
+    return $(this).css('display') !== 'none';
+    });
     const navItems = $('.nav-item');
     const header = $('header');
 

@@ -75,7 +75,8 @@
         <section id="home">
             <div class="shape"></div>
             <div id="cta">
-                <h1 class="title" data-i18n="hero_title">Fazemos da sua empresa um fenomeno <span>extraordinario</span></h1>
+                <h1 class="title" data-i18n="hero_title">Fazemos da sua empresa um fenomeno <span>extraordinario</span>
+                </h1>
 
                 <p class="description-special" data-i18n="hero_sub">
                     Olá somos a Auron
@@ -185,7 +186,7 @@
             </div>
         </section>
 
-        <section id="contact">
+          <section id="contact">
             <h2 class="title" data-i18n="contact_title">Contato</h2>
             <p class="subtitle" data-i18n="contact_subtitle">
                 Vamos conversar sobre como podemos transformar sua ideia em um sistema web eficiente.
@@ -218,17 +219,55 @@
                     </div>
                 </div>
 
-                <form action="https://formsubmit.co/auronwebsistemas@gmail.com" method="POST" class="contact-form">
-                    <input type="text" name="nome" data-i18n-placeholder="contact_name" placeholder="Seu nome" required>
-                    <input type="email" name="email" data-i18n-placeholder="contact_email" placeholder="Seu e-mail" required>
-                    <input type="text" name="assunto" data-i18n-placeholder="contact_subject" placeholder="Assunto">
-                    <textarea data-i18n-placeholder="contact_message" placeholder="Digite sua mensagem..." name="mensagem" rows="5"></textarea>
+                <div class="contact-card">
+                    <div class="contact-tabs">
+                        <button type="button" class="tab-btn active" data-tab="diag" data-i18n="tab_diag">Solicitar diagnóstico</button>
+                        <button type="button" class="tab-btn" data-tab="msg" data-i18n="tab_msg">Enviar mensagem</button>
+                    </div>
 
-                    <button type="submit" class="btn-default" data-i18n="contact_btn">
-                        Enviar mensagem
-                    </button>
-                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/obrigado.html">
-                </form>
+                    <!-- Aba: Solicitar diagnóstico (vai pro WhatsApp) -->
+                    <form id="diagnostico_form" class="contact-form tab-panel active" data-panel="diag">
+                        <input type="text" name="nome" id="diag_nome" data-i18n-placeholder="diag_nome" placeholder="Seu nome" required>
+                        <input type="tel" name="whatsapp" id="diag_whatsapp" data-i18n-placeholder="diag_whatsapp" placeholder="WhatsApp (com DDD)" required>
+                        <input type="email" name="email" id="diag_email" data-i18n-placeholder="diag_email" placeholder="Seu e-mail" required>
+
+                        <select name="tipo_projeto" id="diag_tipo" required>
+                            <option value="" data-i18n="diag_tipo_placeholder" disabled selected>Tipo de projeto</option>
+                            <option value="Site institucional" data-i18n="diag_tipo_site">Site institucional</option>
+                            <option value="E-commerce" data-i18n="diag_tipo_ecommerce">E-commerce</option>
+                            <option value="Sistema/Software" data-i18n="diag_tipo_sistema">Sistema / Software</option>
+                            <option value="Aplicativo" data-i18n="diag_tipo_app">Aplicativo</option>
+                            <option value="Outro" data-i18n="diag_tipo_outro">Outro</option>
+                        </select>
+
+                        <select name="prazo" id="diag_prazo" required>
+                            <option value="" data-i18n="diag_prazo_placeholder" disabled selected>Prazo desejado</option>
+                            <option value="Urgente" data-i18n="diag_prazo_urgente">Urgente</option>
+                            <option value="1 mês" data-i18n="diag_prazo_1mes">Até 1 mês</option>
+                            <option value="1 a 3 meses" data-i18n="diag_prazo_3meses">1 a 3 meses</option>
+                            <option value="Sem pressa" data-i18n="diag_prazo_sempressa">Sem pressa</option>
+                        </select>
+
+                        <textarea name="descricao" id="diag_descricao" data-i18n-placeholder="diag_descricao" placeholder="Conte um pouco sobre o que você precisa..." rows="4" required></textarea>
+
+                        <button type="submit" class="btn-default" data-i18n="diag_submit">
+                            Enviar e falar no WhatsApp
+                        </button>
+                    </form>
+
+                    <!-- Aba: Enviar mensagem (e-mail via formsubmit) -->
+                    <form action="https://formsubmit.co/auronwebsistemas@gmail.com" method="POST" class="contact-form tab-panel" data-panel="msg">
+                        <input type="text" name="nome" data-i18n-placeholder="contact_name" placeholder="Seu nome" required>
+                        <input type="email" name="email" data-i18n-placeholder="contact_email" placeholder="Seu e-mail" required>
+                        <input type="text" name="assunto" data-i18n-placeholder="contact_subject" placeholder="Assunto">
+                        <textarea data-i18n-placeholder="contact_message" placeholder="Digite sua mensagem..." name="mensagem" rows="5"></textarea>
+
+                        <button type="submit" class="btn-default" data-i18n="contact_btn">
+                            Enviar mensagem
+                        </button>
+                        <input type="hidden" name="_next" value="http://127.0.0.1:5500/obrigado.html">
+                    </form>
+                </div>
 
             </div>
         </section>
@@ -279,9 +318,10 @@
 
     </main>
 
-    <script src="lang.js"></script>
-    <script src="script.js"></script>
-    <script src="animations.js"></script>
+    <script src="javascript/animations.js"></script>
+    <script src="javascript/script.js"></script>
+    <script src="javascript/lang.js"></script>
+    <script src="javascript/diagnostico.js"></script>
 </body>
 
 </html>

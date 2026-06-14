@@ -18,6 +18,25 @@ body {
     overflow-x: hidden;
 }
 
+
+:root {
+  --auron: #8610d0;
+  --auron-light: #a030e8;
+  --auron-dark: #6008a8;
+  --auron-alpha: rgba(134, 16, 208, 0.08);
+  --text-primary: #1a1a1a;
+  --text-secondary: #555;
+  --text-muted: #888;
+  --bg-white: #fff;
+  --bg-page: #f7f7f7;
+  --border: #e5e5e5;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-full: 999px;
+  --transition: 0.2s ease;
+}
+
+
 section {
     padding: 50px 8%;
 }
@@ -242,12 +261,6 @@ section {
         padding: 120px 6% 40px;
     }
 
-    #trending .trending-cards{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 24px;
-    }
 }
 
 /* services */
@@ -562,4 +575,82 @@ textarea{
         align-items: center;
         text-align: center;
     }
+}
+
+/* ===== Card de contato com abas (diagnóstico / mensagem) ===== */
+
+.contact-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .1);
+}
+
+.contact-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+}
+
+.tab-btn {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: color var(--transition), border-color var(--transition);
+}
+
+.tab-btn:hover {
+    color: var(--auron);
+}
+
+.tab-btn.active {
+    color: var(--auron);
+    border-bottom-color: var(--auron);
+}
+
+/* Painéis das abas */
+.contact-card .tab-panel {
+    display: none;
+}
+
+.contact-card .tab-panel.active {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Os forms dentro do card não repetem o fundo/sombra do card */
+.contact-card .contact-form {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
+.contact-card .contact-form select {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-primary);
+    background: #fff;
+}
+
+.contact-card .contact-form select:focus {
+    outline: none;
+    border-color: var(--auron);
+}
+
+.contact-card .contact-form select:invalid {
+    color: var(--text-muted);
 }
